@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap');
+
+body {
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+}
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+.lines {
+  /*width: 56px;*/
+  font-size: 56px;
+  color: #206e8f;
+  /*border-radius: 50%;*/
+}
+.smart-fox {
+  text-align: center;
+  color: #206e8f;
+}
+.fa-question-circle {
+  font-size: 56px;
+  color: #206e8f;
+}
+.footer {
+  background: #206e8f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgb(255,255,255);
+  width: 100%;
+}
+.footer-links {
+  display: block;
+  align-items: center;
+}
+.footer-links a {
+  color: rgb(255,255,255);
+  text-decoration: none;
+  font-size: 12px;
+  padding: 0px 10px;
+  transition: 0.3s;
+}
+.footer-links a:hover {
+  color: #ee5928;
+}
+.email-link a {
+  color: rgb(255,255,255);
+  text-decoration: none;
+  font-size: 12px;
+  padding: 0px 10px;
+  transition: 0.3s;
+}
+.email-link a:hover {
+  color: #ee5928;
+}
