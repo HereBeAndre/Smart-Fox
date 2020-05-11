@@ -1,7 +1,5 @@
 let countdown;
 const counter = document.querySelector('.display_time_left_count');
-// const dateOfToday = document.querySelector(".date-field");
-const valueOfForm = document.getElementById('submitButton');
 
 function timer(seconds) {
   clearInterval(countdown);
@@ -31,7 +29,6 @@ function setDateOfToday() {
   const todayShowMonth = today.getUTCMonth();
   const todayYear = today.getUTCFullYear();
   document.querySelector(".date-field").innerHTML = `${todayYear} / ${todayShowMonth} / ${todayShow}`;
-  // dateOfToday.textContent = `${todayShow} - ${todayShowMonth}`;
 }
 
 setDateOfToday();
@@ -42,9 +39,10 @@ document.customForm.addEventListener("submit", function(event) {
   timer(minutes * 60);
   this.reset();
   })
-document.getElementById('submitButton').addEventListener("click", function(event) {
-  event.preventDefault();
-  const minutes = valueOfForm.value;
-  console.log(minutes);
-  // console.log(minutes);
-})
+// document.getElementById('submitButton').addEventListener("click", function(event) {
+//   event.preventDefault();
+//   const minutes = valueOfForm.value;
+//   console.log(minutes);
+// //   console.log(event);
+// })
+
