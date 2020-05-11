@@ -1,6 +1,6 @@
 let countdown;
 const counter = document.querySelector('.display_time_left_count');
-// const dateOfToday = document.querySelector(".date-today");
+// const dateOfToday = document.querySelector(".date-field");
 
 function timer(seconds) {
   const now = Date.now();
@@ -25,9 +25,11 @@ function displayTimeLeft(seconds) {
 
 function setDateOfToday() {
   const today = new Date;
-  const todayShow = today.getDate();
-  const todayShowMonth = today.getMonth();
-  document.querySelector(".date-today").innerHTML = `${todayShow} - ${todayShowMonth}`;
+  const todayShow = today.getUTCDate();
+  const todayShowMonth = today.getUTCMonth();
+  const todayYear = today.getUTCFullYear();
+  document.querySelector(".date-field").innerHTML = `${todayYear} / ${todayShowMonth} / ${todayShow}`;
   // dateOfToday.textContent = `${todayShow} - ${todayShowMonth}`;
 }
 timer(126);
+setDateOfToday();
