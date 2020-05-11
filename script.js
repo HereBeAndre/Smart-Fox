@@ -1,8 +1,10 @@
 let countdown;
 const counter = document.querySelector('.display_time_left_count');
 // const dateOfToday = document.querySelector(".date-field");
+const valueOfForm = document.getElementById('submitButton');
 
 function timer(seconds) {
+  clearInterval(countdown);
   const now = Date.now();
   const then = now + seconds * 1000;
   displayTimeLeft(seconds);
@@ -31,5 +33,18 @@ function setDateOfToday() {
   document.querySelector(".date-field").innerHTML = `${todayYear} / ${todayShowMonth} / ${todayShow}`;
   // dateOfToday.textContent = `${todayShow} - ${todayShowMonth}`;
 }
-timer(126);
+
 setDateOfToday();
+
+document.customForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const minutes = this.minutes.value;
+  timer(minutes * 60);
+  this.reset();
+  })
+document.getElementById('submitButton').addEventListener("click", function(event) {
+  event.preventDefault();
+  const minutes = valueOfForm.value;
+  console.log(minutes);
+  // console.log(minutes);
+})

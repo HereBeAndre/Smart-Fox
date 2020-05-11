@@ -4,15 +4,25 @@ body {
   font-family: 'Rubik', sans-serif;
   text-align: center;
 }
-.flex-wrapper {
-  display: flex;
+.background-image {
+  background-image: url(images/alarm-clock-bg.jpg);
+  max-height: 100vh;
+  max-width: 100vw;
+  object-fit: cover;
+  margin: auto;
+  background-position: center center;
+}
+.container {
   min-height: 100vh;
+  min-width: 100vw;
+  margin: auto;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0;
 }
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -72,9 +82,6 @@ body {
 }
 .display_time_left_count {
   width: 20%;
-  background-color: #206e8f;
-  border: 4px solid #ee5928;
-  border-radius: 4px;
   color: rgb(255,255,255);
   margin: 0 auto;
 }

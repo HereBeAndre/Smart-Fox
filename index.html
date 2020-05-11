@@ -9,9 +9,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Smart Fox</title>
   </head>
-  <body>
-    <div class="flex-wrapper">
-      <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <body class="background-image">
+    <div class="container">
+      <nav class="navbar navbar-expand-sm navbar-light navbar-lewagon">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
@@ -33,12 +33,16 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      </div>
-      <div class="container">
-        <h2 class="date-field"></h2>
-        <img src="images/pngwing.com.png">
+      </nav>
+        <div>
+          <h2 class="date-field"></h2>
+        </div>
         <h2 class="display_time_left_count"></h2>
-      </div>
+        <form name="customForm" id="custom-time">
+          <input type="text" name="minutes" placeholder="Enter minutes">
+          <input type="submit" name="minuteTest" id="submitButton">
+        </form>
+
       <div class="footer">
         <div>
           <p>Smart Fox</p>
