@@ -7,45 +7,63 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/b0ef4f63fd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Smart Fox</title>
+    <title>Zippy | Your Time Counselor</title>
   </head>
   <body class="background-image">
     <div class="container">
       <nav class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-              <i class="fas fa-bars lines" type="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-              <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Pomodoro Technique</a>
-                <a class="dropdown-item" href="#">About Us</a>
-              </div>
-            </li>
-          </ul>
+        <div class="left-logo">
+          <a href="#"><img src="images/zippy.png" style="height: 120px; padding-left: 1%"></a>
         </div>
-        <div class="smart-fox d-block">
-          <h1 style="font-size: 48px; font-weight: bolder">Smart Fox</h1>
-          <h3 style="font-size: 32px">Your Wise Time Counselor</h3>
+        <div class="right-side">
+
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div>
+              <a class="home" href="#">Home</a>
+            </div>
+            <div>
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                  <i class="projects" type="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</i>
+                  <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="http://www.tuche.org/" target="blank">Tuche</a>
+                    <a class="dropdown-item" href="https://shop-helper-wagon.herokuapp.com/" target="blank">ShopHelper</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                  <i class="about" type="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</i>
+                  <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://www.linkedin.com/in/andrea-tota6/" target="blank">LinkedIn</a>
+                    <a class="dropdown-item" href="https://github.com/HereBeAndre" target="blank">GitHub</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <a class="navbar-brand" href="#">
-          <i class="far fa-question-circle"></i>
-        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       </nav>
+      <div class="main-content">
         <div>
           <h2 class="date-field"></h2>
         </div>
-        <h2 class="display_time_left_count" style="color: black; font-size: 80px; font-weight: bolder"></h2>
         <form name="customForm" id="custom-time">
-          <input type="text" name="minutes" placeholder="Enter minutes">
+          <input type="text" name="minutes" placeholder="Enter minutes" autocomplete="off">
           <input type="submit" name="minuteTest" id="submitButton">
         </form>
-
+      </div>
+      <h2 class="display_time_left_count" style="color: black; font-size: 80px; font-weight: bolder"></h2>
       <div class="footer">
         <div>
-          <p>Smart Fox</p>
+          <p>© 2020 Zippy</p>
+          <p>Your Time Counselor</p>
         </div>
         <div class="email-link">
           <p>Contact Us</p>
@@ -53,8 +71,8 @@
         </div>
         <div class="footer-links">
           <p>Find Us</p>
-          <a href="https://github.com/HereBeAndre"><i class="fab fa-github"></i> GitHub</a>
-          <a href="https://www.linkedin.com/in/andrea-tota6/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/HereBeAndre"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/andrea-tota6/"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </div>
