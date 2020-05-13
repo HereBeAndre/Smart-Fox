@@ -1,5 +1,9 @@
 let countdown;
 const counter = document.querySelector('.display_time_left_count');
+const alarmTimeValue = document.querySelector('.display_time_left_count').innerHTML;
+// ALARM SOUND
+const sound = new Audio("https://actions.google.com/sounds/v1/alarms/digital_watch_alarm_long.ogg");
+sound.loop = true;
 
 function timer(seconds) {
   clearInterval(countdown);
@@ -10,6 +14,7 @@ function timer(seconds) {
     const secondsLeft = Math.round((then - Date.now()) / 1000);
     if(secondsLeft < 0) {
       clearInterval(countdown);
+      sound.play();
       return;
     }
     displayTimeLeft(secondsLeft)
@@ -21,6 +26,10 @@ function displayTimeLeft(seconds) {
   const remainingSecs = seconds % 60;
   const counterDisplay = `${minutes} : ${remainingSecs < 10 ? "0" : ""}${remainingSecs}`;
   counter.textContent = counterDisplay;
+  // const test = alarmTimeValue;
+  // if(test == "0") {
+  //   sound.play();
+  // }
 }
 
 function setDateOfToday() {
@@ -38,16 +47,10 @@ document.customForm.addEventListener("submit", function(event) {
   const minutes = this.minutes.value;
   timer(minutes * 60);
   this.reset();
-  })
+})
 
-// ALARM SOUND
-const sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/animals/duck1.wav");
-// sound.loop = true;
-
-const alarmTimeValue = document.querySelector('.display_time_left_count').innerText;
-
-function alarmSound() {
-  if(alarmTimeValue == "0:00") {
-    sound.play();
-  }
-}
+// STOP TIMER BUTTON
+// document.getElementById('stop-btn').addEventListener('click', () => {
+//    if (countdown)
+//      clearInterval(countdown);
+//  });
