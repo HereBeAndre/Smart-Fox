@@ -39,10 +39,15 @@ document.customForm.addEventListener("submit", function(event) {
   timer(minutes * 60);
   this.reset();
   })
-// document.getElementById('submitButton').addEventListener("click", function(event) {
-//   event.preventDefault();
-//   const minutes = valueOfForm.value;
-//   console.log(minutes);
-// //   console.log(event);
-// })
 
+// ALARM SOUND
+const sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/animals/duck1.wav");
+// sound.loop = true;
+
+const alarmTimeValue = document.querySelector('.display_time_left_count').innerText;
+
+function alarmSound() {
+  if(alarmTimeValue == "0:00") {
+    sound.play();
+  }
+}
