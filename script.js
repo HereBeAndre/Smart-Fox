@@ -1,6 +1,7 @@
 let countdown;
 const counter = document.querySelector('.display_time_left_count');
 const alarmTimeValue = document.querySelector('.display_time_left_count').innerHTML;
+const stopButton = document.getElementById("stop-btn");
 // ALARM SOUND
 const sound = new Audio("https://actions.google.com/sounds/v1/alarms/digital_watch_alarm_long.ogg");
 sound.loop = true;
@@ -16,6 +17,12 @@ function timer(seconds) {
       clearInterval(countdown);
       sound.play();
       return;
+      // Not working yet
+      stopButton.addEventListener("click", function() {
+        console.log("hello");
+        sound.pause();
+        sound.currentTime = 0;
+      })
     }
     displayTimeLeft(secondsLeft)
   }, 1000);
@@ -26,10 +33,6 @@ function displayTimeLeft(seconds) {
   const remainingSecs = seconds % 60;
   const counterDisplay = `${minutes} : ${remainingSecs < 10 ? "0" : ""}${remainingSecs}`;
   counter.textContent = counterDisplay;
-  // const test = alarmTimeValue;
-  // if(test == "0") {
-  //   sound.play();
-  // }
 }
 
 function setDateOfToday() {
@@ -49,7 +52,7 @@ document.customForm.addEventListener("submit", function(event) {
   this.reset();
 })
 
-// STOP TIMER BUTTON
+// PAUSE TIMER BUTTON
 // document.getElementById('stop-btn').addEventListener('click', () => {
 //    if (countdown)
 //      clearInterval(countdown);
