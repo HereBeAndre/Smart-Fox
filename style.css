@@ -47,9 +47,6 @@ body {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
 .home {
   /*width: 56px;*/
   font-size: 24px;
@@ -139,8 +136,3 @@ div .navbar-nav .nav-item .projects-about {
   color: rgb(40,40,40);
 }
 
-/*.navbar-nav .nav-item a:hover ul.dropdown-menu {
-  display: none !important;
-}*/
-
-/*ENTER MINUTES MUST BE GREATER THAN 0 (JS)*/

@@ -18,15 +18,12 @@ function timer(seconds) {
       sound.loop = true;
       stopButton.hidden = false;
       return;
-      // Not working yet
-
     }
     displayTimeLeft(secondsLeft)
   }, 1000);
 }
 
 stopButton.addEventListener("click", function() {
-  console.log("hello");
   sound.pause();
   sound.currentTime = 0;
 })
@@ -55,6 +52,11 @@ setDateOfToday();
 document.customForm.addEventListener("submit", function(event) {
   event.preventDefault();
   const minutes = this.minutes.value;
+  if(minutes < 1) {
+    alert("Value must be greater than 1");
+    this.reset();
+    return;
+  }
   timer(minutes * 60);
   this.reset();
 })
