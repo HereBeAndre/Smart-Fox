@@ -50,21 +50,23 @@
       </nav>
       <div class="main-content">
         <div>
-          <h2 class="date-field"></h2>
+          <!-- <h2 class="date-field"></h2> -->
+          <form name="customForm" id="custom-time">
+            <input type="text" name="minutes" placeholder="Enter minutes" autocomplete="off">
+            <input type="submit" name="minuteTest" id="submitButton">
+          </form>
+        </div>
+        <div>
+          <h2 class="display_time_left_count" style="color: black; font-size: 80px; font-weight: bolder"></h2>
           <button type="submit" id="stop-btn" hidden="true" onclick="hideStopButton()"></button>
         </div>
-        <form name="customForm" id="custom-time">
-          <input type="text" name="minutes" placeholder="Enter minutes" autocomplete="off">
-          <input type="submit" name="minuteTest" id="submitButton">
-        </form>
       </div>
-      <h2 class="display_time_left_count" style="color: black; font-size: 80px; font-weight: bolder"></h2>
       <div class="footer">
-        <div>
+        <div style="text-align: left;">
           <p class="footerHeaders">© 2020 Zippy</p>
           <p>Your Time Counselor</p>
         </div>
-        <div class="email-link">
+        <div class="email-link" style="text-align: left;">
           <p class="footerHeaders">Contacts</p>
           <a href="#">Email</a>
         </div>

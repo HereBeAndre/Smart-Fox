@@ -39,15 +39,16 @@ function displayTimeLeft(seconds) {
   counter.textContent = counterDisplay;
 }
 
-function setDateOfToday() {
-  const today = new Date;
-  const todayShow = today.getUTCDate();
-  const todayShowMonth = today.getUTCMonth();
-  const todayYear = today.getUTCFullYear();
-  document.querySelector(".date-field").innerHTML = `${todayYear} / ${todayShowMonth} / ${todayShow}`;
-}
+// FUNCTION TO DISPLAY DATE OF TODAY (NOT USEFUL IMO)
+// function setDateOfToday() {
+//   const today = new Date;
+//   const todayShow = today.getUTCDate();
+//   const todayShowMonth = today.getUTCMonth();
+//   const todayYear = today.getUTCFullYear();
+//   document.querySelector(".date-field").innerHTML = `${todayYear} / ${todayShowMonth} / ${todayShow}`;
+// }
 
-setDateOfToday();
+// setDateOfToday();
 
 document.customForm.addEventListener("submit", function(event) {
   event.preventDefault();
