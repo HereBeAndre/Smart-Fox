@@ -139,6 +139,8 @@ div .navbar-nav .nav-item .projects-about {
   color: rgb(40,40,40);
 }
 
-.navbar-nav .nav-item a:hover ul.dropdown-menu {
+/*.navbar-nav .nav-item a:hover ul.dropdown-menu {
   display: none !important;
-}
+}*/
+
+/*ENTER MINUTES MUST BE GREATER THAN 0 (JS)*/
