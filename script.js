@@ -4,7 +4,6 @@ const alarmTimeValue = document.querySelector('.display_time_left_count').innerH
 const stopButton = document.getElementById("stop-btn");
 // ALARM SOUND
 const sound = new Audio("https://actions.google.com/sounds/v1/alarms/digital_watch_alarm_long.ogg");
-sound.loop = true;
 
 function timer(seconds) {
   clearInterval(countdown);
@@ -16,16 +15,24 @@ function timer(seconds) {
     if(secondsLeft < 0) {
       clearInterval(countdown);
       sound.play();
+      sound.loop = true;
+      stopButton.hidden = false;
       return;
       // Not working yet
-      stopButton.addEventListener("click", function() {
-        console.log("hello");
-        sound.pause();
-        sound.currentTime = 0;
-      })
+
     }
     displayTimeLeft(secondsLeft)
   }, 1000);
+}
+
+stopButton.addEventListener("click", function() {
+  console.log("hello");
+  sound.pause();
+  sound.currentTime = 0;
+})
+
+function hideStopButton() {
+  stopButton.hidden = true;
 }
 
 function displayTimeLeft(seconds) {

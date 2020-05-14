@@ -23,22 +23,22 @@
             <div>
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
-                  <i class="projects" style="font-style: normal;" type="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</i>
-                  <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="http://www.tuche.org/" target="blank">Tuche</a>
-                    <a class="dropdown-item" href="https://shop-helper-wagon.herokuapp.com/" target="blank">ShopHelper</a>
-                  </div>
+                  <a class="projects-about" type="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+                  <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="http://www.tuche.org/" target="blank">Tuche</a></li>
+                    <li><a class="dropdown-item" href="https://shop-helper-wagon.herokuapp.com/" target="blank">ShopHelper</a></li>
+                  </ul>
                 </li>
               </ul>
             </div>
             <div>
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
-                  <i class="about" style="font-style: normal;" type="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</i>
-                  <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="https://www.linkedin.com/in/andrea-tota6/" target="blank">LinkedIn</a>
-                    <a class="dropdown-item" href="https://github.com/HereBeAndre" target="blank">GitHub</a>
-                  </div>
+                  <a class="projects-about" type="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+                  <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="https://www.linkedin.com/in/andrea-tota6/" target="blank">LinkedIn</a></li>
+                    <li><a class="dropdown-item" href="https://github.com/HereBeAndre" target="blank">GitHub</a></li>
+                  </ul>
                 </li>
               </ul>
             </div>
@@ -51,7 +51,7 @@
       <div class="main-content">
         <div>
           <h2 class="date-field"></h2>
-          <button type="submit" id="stop-btn" value="Stop"></button>
+          <button type="submit" id="stop-btn" hidden="true" onclick="hideStopButton()"></button>
         </div>
         <form name="customForm" id="custom-time">
           <input type="text" name="minutes" placeholder="Enter minutes" autocomplete="off">
@@ -61,15 +61,15 @@
       <h2 class="display_time_left_count" style="color: black; font-size: 80px; font-weight: bolder"></h2>
       <div class="footer">
         <div>
-          <p>© 2020 Zippy</p>
+          <p class="footerHeaders">© 2020 Zippy</p>
           <p>Your Time Counselor</p>
         </div>
         <div class="email-link">
-          <p>Contact Us</p>
+          <p class="footerHeaders">Contacts</p>
           <a href="#">Email</a>
         </div>
         <div class="footer-links">
-          <p>Find Us</p>
+          <p class="footerHeaders">Discover</p>
           <a href="https://github.com/HereBeAndre"><i class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/andrea-tota6/"><i class="fab fa-linkedin"></i></a>
         </div>

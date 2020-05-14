@@ -21,6 +21,23 @@ body {
   justify-content: space-between;
   padding: 0;
 }
+.display_time_left_count {
+  width: 20%;
+  color: rgb(255,255,255);
+  margin: 0 auto;
+}
+.main-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+#stop-btn {
+  width: 100px;
+  height: 50px;
+}
+
+/*NAVBAR*/
 .navbar-lewagon {
   justify-content: space-between;
   margin: 0px 0px 0px 24px;
@@ -36,58 +53,21 @@ body {
 .home {
   /*width: 56px;*/
   font-size: 24px;
-  color: rgb(40,40,40);
+  color: rgb(55,55,55);
   transition: 0.3s;
   text-decoration: none !important;
   /*border-radius: 50%;*/
 }
-.home:hover {
-  color: rgb(20,20,20);
-}
-.footer {
-  /*background: #206e8f;*/
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
-  padding: 0px 50px;
-  color: rgb(40,40,40);
-  width: 100%;
-}
-.footer-links {
-  display: block;
-  align-items: center;
-}
-.footer-links a {
-  color: rgb(40,40,40);
-  text-decoration: none;
-  font-size: 12px;
-  padding: 0px 10px;
+div .navbar-nav .nav-item .projects-about {
+  /*width: 56px;*/
+  font-size: 24px;
+  color: rgb(55,55,55);
   transition: 0.3s;
+  text-decoration: none !important;
+  /*border-radius: 50%;*/
 }
-.footer-links a:hover {
-  color: rgb(20,20,20);
-}
-.email-link a {
-  color: rgb(40,40,40);
-  text-decoration: none;
-  font-size: 12px;
-  padding: 0px 10px;
-  transition: 0.3s;
-}
-.email-link a:hover {
-  color: rgb(20,20,20);
-}
-.display_time_left_count {
-  width: 20%;
-  color: rgb(255,255,255);
-  margin: 0 auto;
-}
-.main-content {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  margin: 0 auto;
+.home:hover, div .navbar-nav .nav-item .projects-about:hover {
+  color: rgb(0,0,0);
 }
 .dropdown-menu {
   background-color: rgb(255,255,255);
@@ -119,8 +99,46 @@ body {
   padding-top: 0px;
   padding-bottom: 0px;
   /*transition: 0.3s;*/
-  }
-#stop-btn {
-  width: 100px;
-  height: 50px;
+}
+/*FOOTER*/
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgb(40,40,40);
+  width: 100%;
+}
+.footer-links {
+  display: block;
+  align-items: center;
+}
+.footer-links a {
+  color: rgb(50,50,50);
+  text-decoration: none;
+  font-size: 32px;
+  padding: 0px 10px;
+  transition: 0.3s;
+}
+.footer-links a:hover {
+  color: rgb(0,0,0);
+}
+.email-link a {
+  color: rgb(40,40,40);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 0px 10px;
+  transition: 0.3s;
+}
+.email-link a:hover {
+  color: rgb(20,20,20);
+}
+.footerHeaders {
+  font-size: 18px;
+  color: rgb(40,40,40);
+}
+
+.navbar-nav .nav-item a:hover ul.dropdown-menu {
+  display: none !important;
 }
