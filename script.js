@@ -58,6 +58,11 @@ document.customForm.addEventListener("submit", function(event) {
     this.reset();
     return;
   }
+  else if(isNaN(minutes)) {
+    alert("Please enter a number");
+    this.reset();
+    return;
+  }
   timer(minutes * 60);
   this.reset();
 })
