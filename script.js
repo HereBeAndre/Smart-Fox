@@ -3,7 +3,7 @@ const counter = document.querySelector('.display_time_left_count');
 const alarmTimeValue = document.querySelector('.display_time_left_count').innerHTML;
 const stopButton = document.getElementById("stop-btn");
 // ALARM SOUND
-const sound = new Audio("https://actions.google.com/sounds/v1/alarms/digital_watch_alarm_long.ogg");
+const sound = new Audio("audios/alarm.mp3")
 
 function timer(seconds) {
   clearInterval(countdown);

@@ -22,7 +22,7 @@ body {
   padding: 0;
 }
 .display_time_left_count {
-  width: 20%;
+  width: 100%;
   color: rgb(255,255,255);
   margin: 0 auto;
 }
@@ -35,6 +35,8 @@ body {
 #stop-btn {
   width: 100px;
   height: 50px;
+  color: red;
+  background-color: white;
 }
 
 /*NAVBAR*/
