@@ -199,12 +199,55 @@ div .navbar-nav .nav-item .projects-about {
   transform: translateX(0%);
 }
 
+/*BUTTONS*/
+
 #submitButton {
   height: 40px;
   width: 120px;
-  background-color: black;
+  background-color: rgb(40,40,40);
   color: white;
-  /*visibility: visible;*/
   border: 1px solid rgb(180,180,180);
   border-radius: 4px;
+  transition: all 0.3s ease;
+}
+#submitButton:hover {
+  background-color: rgb(0,0,0);
+}
+#stop-button {
+  height: 40px;
+  width: 120px;
+  background-color: #5776be;
+  color: white;
+  border: 1px solid rgb(180,180,180);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+#stop-button:hover {
+  background-color: #4563b9;
+}
+
+#pause-button {
+  height: 40px;
+  width: 120px;
+  background-color: #F1A365;
+  color: white;
+  border: 1px solid rgb(180,180,180);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+#pause-button:hover {
+  background-color: #f29a52;
+}
+
+#resume-button {
+  height: 40px;
+  width: 120px;
+  background-color: #6eaa93;
+  color: white;
+  border: 1px solid rgb(180,180,180);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+#resume-button:hover {
+  background-color: #3C9B77;
 }

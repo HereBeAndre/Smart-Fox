@@ -2,8 +2,9 @@ let countdown;
 let secondsLeft;
 const counter = document.querySelector('.display_time_left_count');
 const alarmTimeValue = document.querySelector('.display_time_left_count').innerHTML;
-const stopButton = document.getElementById("stop-btn");
-const pauseButton = document.getElementById("pause-btn");
+const stopButton = document.getElementById("stop-button");
+const pauseButton = document.getElementById("pause-button");
+const resumeButton = document.getElementById("resume-button");
 // ALARM SOUND
 const sound = new Audio("audios/alarm.mp3")
 
@@ -83,7 +84,18 @@ let timeLeft;
 function pause() {
   if(!paused){
     paused = true;
-    clearInterval(countdown); // stop the clock
-    // timeLeft = displayTimeLeft(countdown).total; // preserve remaining time
+    clearInterval(countdown);
+    // console.log(countdown); // stop the clock
+    // timeLeft = displayTimeLeft(countdown); // preserve remaining time
+  }
+}
+
+// RESUME BUTTON
+
+function resume() {
+  if(paused) {
+    paused = false;
+    // deadline = new Date(Date.parse(new Date()) + timeLeft);
+    countdown.play();
   }
 }
