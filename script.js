@@ -1,7 +1,9 @@
 let countdown;
+let secondsLeft;
 const counter = document.querySelector('.display_time_left_count');
 const alarmTimeValue = document.querySelector('.display_time_left_count').innerHTML;
 const stopButton = document.getElementById("stop-btn");
+const pauseButton = document.getElementById("pause-btn");
 // ALARM SOUND
 const sound = new Audio("audios/alarm.mp3")
 
@@ -11,7 +13,7 @@ function timer(seconds) {
   const then = now + seconds * 1000;
   displayTimeLeft(seconds);
   countdown = setInterval(() => {
-    const secondsLeft = Math.round((then - Date.now()) / 1000);
+    secondsLeft = Math.round((then - Date.now()) / 1000);
     if(secondsLeft < 0) {
       clearInterval(countdown);
       sound.play();
@@ -31,6 +33,12 @@ stopButton.addEventListener("click", function() {
 function hideStopButton() {
   stopButton.hidden = true;
 }
+
+// function pause() {
+//   pauseButton.addEventListener("click", function() {
+//   .pause();
+//   });
+// }
 
 function displayTimeLeft(seconds) {
   const minutes = Math.floor(seconds / 60);
@@ -68,7 +76,14 @@ document.customForm.addEventListener("submit", function(event) {
 })
 
 // PAUSE TIMER BUTTON
-// document.getElementById('stop-btn').addEventListener('click', () => {
-//    if (countdown)
-//      clearInterval(countdown);
-//  });
+
+let paused = false;
+let timeLeft;
+
+function pause() {
+  if(!paused){
+    paused = true;
+    clearInterval(countdown); // stop the clock
+    // timeLeft = displayTimeLeft(countdown).total; // preserve remaining time
+  }
+}

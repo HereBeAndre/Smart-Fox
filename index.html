@@ -56,12 +56,13 @@
             <label for="minutes" class="label-minutes">
               <span class="content-minutes">Enter Minutes</span>
             </label>
-            <button type="submit" name="minuteTest" id="submitButton"></button>
+            <button type="submit" name="minuteTest" id="submitButton"><i class="fas fa-stopwatch"></i> START</button>
           </form>
         </div>
         <div>
           <h2 class="display_time_left_count" style="color: black; font-size: 80px; font-weight: bolder"></h2>
           <button type="submit" id="stop-btn" hidden="true" onclick="hideStopButton()">Reset Timer</button>
+          <button type="submit" id="pause-btn" onclick="pause()">Pause</button>
         </div>
       </div>
       <div class="footer">
