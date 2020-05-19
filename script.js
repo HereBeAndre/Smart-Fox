@@ -3,7 +3,6 @@ let secondsLeft;
 const counter = document.querySelector('.display_time_left_count');
 const alarmTimeValue = document.querySelector('.display_time_left_count').innerHTML;
 const stopButton = document.getElementById("stop-button");
-const pauseButton = document.getElementById("pause-button");
 const resumeButton = document.getElementById("resume-button");
 // ALARM SOUND
 const sound = new Audio("audios/alarm.mp3")
@@ -35,29 +34,12 @@ function hideStopButton() {
   stopButton.hidden = true;
 }
 
-// function pause() {
-//   pauseButton.addEventListener("click", function() {
-//   .pause();
-//   });
-// }
-
 function displayTimeLeft(seconds) {
   const minutes = Math.floor(seconds / 60);
   const remainingSecs = seconds % 60;
   const counterDisplay = `${minutes} : ${remainingSecs < 10 ? "0" : ""}${remainingSecs}`;
   counter.textContent = counterDisplay;
 }
-
-// FUNCTION TO DISPLAY DATE OF TODAY (NOT USEFUL IMO)
-// function setDateOfToday() {
-//   const today = new Date;
-//   const todayShow = today.getUTCDate();
-//   const todayShowMonth = today.getUTCMonth();
-//   const todayYear = today.getUTCFullYear();
-//   document.querySelector(".date-field").innerHTML = `${todayYear} / ${todayShowMonth} / ${todayShow}`;
-// }
-
-// setDateOfToday();
 
 document.customForm.addEventListener("submit", function(event) {
   event.preventDefault();
@@ -76,26 +58,38 @@ document.customForm.addEventListener("submit", function(event) {
   this.reset();
 })
 
-// PAUSE TIMER BUTTON
+// RESUME/PAUSE BUTTON
 
-let paused = false;
-let timeLeft;
+let paused = 0;
 
-function pause() {
-  if(!paused){
-    paused = true;
-    clearInterval(countdown);
-    // console.log(countdown); // stop the clock
-    // timeLeft = displayTimeLeft(countdown); // preserve remaining time
-  }
-}
-
-// RESUME BUTTON
-
-function resume() {
-  if(paused) {
+resumeButton.addEventListener("click", function(event) {
+  // if paused => resume
+  if(paused == false) {
+      // console.log("I'm paused");
+      resumeButton.style.background = "#F1A365";
+      resumeButton.innerText = "Pause";
+      clearInterval(countdown);
+      paused = 1;
+      return;
+    };
+  // else pause
+  if (paused == 1) {
+    // console.log("I'm running");
+    resumeButton.style.background = "#6eaa93";
+    resumeButton.innerText = "Resume";
+    timer(secondsLeft);
     paused = false;
-    // deadline = new Date(Date.parse(new Date()) + timeLeft);
-    countdown.play();
   }
-}
+});
+
+
+// FUNCTION TO DISPLAY DATE OF TODAY (NOT USEFUL IMO)
+// function setDateOfToday() {
+//   const today = new Date;
+//   const todayShow = today.getUTCDate();
+//   const todayShowMonth = today.getUTCMonth();
+//   const todayYear = today.getUTCFullYear();
+//   document.querySelector(".date-field").innerHTML = `${todayYear} / ${todayShowMonth} / ${todayShow}`;
+// }
+
+// setDateOfToday();

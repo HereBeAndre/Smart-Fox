@@ -139,12 +139,18 @@ div .navbar-nav .nav-item .projects-about {
 
 /*CUSTOM FORM*/
 
+/*.minutes-div {
+  display: flex;
+  align-items: center;
+}*/
+
 #custom-time {
   display: flex;
   position: relative;
   width: 100%;
   height: 100px;
   overflow: hidden;
+  align-items: flex-end;
 }
 
 #custom-time-input {
@@ -160,7 +166,7 @@ div .navbar-nav .nav-item .projects-about {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  width: 100%;
+  width: 60%;
   height: 100%;
   pointer-events: none;
   border-bottom: 2px solid black;
@@ -184,12 +190,13 @@ div .navbar-nav .nav-item .projects-about {
   bottom: 5px;
   left: 0px;
   transition: all 0.3s ease;
+  font-size: 18px;
 }
 
 #custom-time #custom-time-input:focus + .label-minutes .content-minutes,
 #custom-time input:valid + .label-minutes .content-minutes {
   transform: translateY(-150%);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bolder;
   transition: all 0.3s ease;
 }
