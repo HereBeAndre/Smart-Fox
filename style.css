@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap');
 
+/*BUTTONS COLORS*/
+/*PAUSE => #F1A365*/
+/*RESUME => #6eaa93*/
+/*RESET => #5776be*/
+
 body {
   font-family: 'Rubik', sans-serif;
   text-align: center;
@@ -139,11 +144,6 @@ div .navbar-nav .nav-item .projects-about {
 
 /*CUSTOM FORM*/
 
-/*.minutes-div {
-  display: flex;
-  align-items: center;
-}*/
-
 #custom-time {
   display: flex;
   position: relative;
@@ -233,7 +233,7 @@ div .navbar-nav .nav-item .projects-about {
   background-color: #4563b9;
 }
 
-#pause-button {
+.pause-button {
   height: 40px;
   width: 120px;
   background-color: #F1A365;
@@ -242,19 +242,19 @@ div .navbar-nav .nav-item .projects-about {
   border-radius: 4px;
   transition: all 0.3s ease;
 }
-#pause-button:hover {
+.pause-button:hover {
   background-color: #f29a52;
 }
 
 #resume-button {
   height: 40px;
   width: 120px;
-  background-color: #6eaa93;
+  background-color: #F1A365;
   color: white;
   border: 1px solid rgb(180,180,180);
   border-radius: 4px;
   transition: all 0.3s ease;
 }
-#resume-button:hover {
+/*#resume-button:hover {
   background-color: #3C9B77;
-}
+}*/
