@@ -13,12 +13,14 @@ function timer(seconds) {
   const then = now + seconds * 1000;
   displayTimeLeft(seconds);
   countdown = setInterval(() => {
+    resumeButton.style.visibility = "visible";
     secondsLeft = Math.round((then - Date.now()) / 1000);
     if(secondsLeft < 0) {
       clearInterval(countdown);
       sound.play();
       sound.loop = true;
       stopButton.hidden = false;
+      resumeButton.hidden = true;
       return;
     }
     displayTimeLeft(secondsLeft)
@@ -66,8 +68,8 @@ resumeButton.addEventListener("click", function(event) {
   // if paused => resume
   if(paused == false) {
       // console.log("I'm paused");
-      resumeButton.style.background = "#F1A365";
-      resumeButton.innerText = "Pause";
+      // resumeButton.style.background = "#6eaa93";
+      // resumeButton.innerText = "Resume";
       clearInterval(countdown);
       paused = 1;
       return;
@@ -75,8 +77,8 @@ resumeButton.addEventListener("click", function(event) {
   // else pause
   if (paused == 1) {
     // console.log("I'm running");
-    resumeButton.style.background = "#6eaa93";
-    resumeButton.innerText = "Resume";
+    // resumeButton.style.background = "#F1A365";
+    // resumeButton.innerText = "Pause";
     timer(secondsLeft);
     paused = false;
   }
