@@ -69,7 +69,7 @@ resumeButton.addEventListener("click", function(event) {
   if(paused == false) {
       console.log("I'm paused");
       resumeButton.style.background = "#6eaa93";
-      resumeButton.innerText = "Resume";
+      resumeButton.innerHTML = "<i class='far fa-play-circle'></i> Resume";
       clearInterval(countdown);
       paused = 1;
       return;
@@ -79,7 +79,7 @@ resumeButton.addEventListener("click", function(event) {
     // resumeButton.classList.toggle("pause-button");
     console.log("I'm running");
     resumeButton.style.background = "#F1A365";
-    resumeButton.html("<i class='far fa-pause-circle'></i>");
+    resumeButton.innerHTML = "<i class='far fa-pause-circle'></i> Pause";
     timer(secondsLeft);
     paused = false;
   }
