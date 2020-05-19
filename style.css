@@ -109,37 +109,38 @@ div .navbar-nav .nav-item .projects-about {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 120px;
   padding: 0px 50px;
-  color: rgb(40,40,40);
+  color: rgb(240,240,240);
   width: 100%;
+  background-color: rgb(40,40,40);
 }
 .footer-links {
   display: block;
   align-items: center;
 }
 .footer-links a {
-  color: rgb(50,50,50);
+  color: rgb(220,220,220);
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
   transition: 0.3s;
 }
 .footer-links a:hover {
-  color: rgb(0,0,0);
+  color: rgb(255,255,255);
 }
 .email-link a {
-  color: rgb(40,40,40);
+  color: rgb(220,220,220);
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   transition: 0.3s;
 }
 .email-link a:hover {
-  color: rgb(20,20,20);
+  color: rgb(255,255,255);
 }
 .footerHeaders {
   font-size: 18px;
-  color: rgb(40,40,40);
+  color: rgb(240,240,240);
 }
 
 /*CUSTOM FORM*/
@@ -191,6 +192,7 @@ div .navbar-nav .nav-item .projects-about {
   left: 0px;
   transition: all 0.3s ease;
   font-size: 18px;
+  color: rgb(40,40,40);
 }
 
 #custom-time #custom-time-input:focus + .label-minutes .content-minutes,
@@ -199,6 +201,7 @@ div .navbar-nav .nav-item .projects-about {
   font-size: 20px;
   font-weight: bolder;
   transition: all 0.3s ease;
+  color: rgb(40,40,40);
 }
 
 #custom-time #custom-time-input:focus + .label-minutes::after,
@@ -233,7 +236,8 @@ div .navbar-nav .nav-item .projects-about {
   background-color: #4563b9;
 }
 
-.pause-button {
+/*CSS for this button is substituded in the JS function*/
+/*.pause-button {
   height: 40px;
   width: 120px;
   background-color: #F1A365;
@@ -244,7 +248,7 @@ div .navbar-nav .nav-item .projects-about {
 }
 .pause-button:hover {
   background-color: #f29a52;
-}
+}*/
 
 #resume-button {
   height: 40px;

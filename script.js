@@ -67,17 +67,16 @@ let paused = 0;
 resumeButton.addEventListener("click", function(event) {
   // if paused => resume
   if(paused == false) {
-      console.log("I'm paused");
-      resumeButton.style.background = "#6eaa93";
-      resumeButton.innerHTML = "<i class='far fa-play-circle'></i> Resume";
-      clearInterval(countdown);
-      paused = 1;
-      return;
-    };
+    // console.log("I'm paused");
+    resumeButton.style.background = "#6eaa93";
+    resumeButton.innerHTML = "<i class='far fa-play-circle'></i> Resume";
+    clearInterval(countdown);
+    paused = 1;
+    return;
+  };
   // else pause
   if (paused == 1) {
-    // resumeButton.classList.toggle("pause-button");
-    console.log("I'm running");
+    // console.log("I'm running");
     resumeButton.style.background = "#F1A365";
     resumeButton.innerHTML = "<i class='far fa-pause-circle'></i> Pause";
     timer(secondsLeft);
@@ -86,7 +85,7 @@ resumeButton.addEventListener("click", function(event) {
 });
 
 
-// FUNCTION TO DISPLAY DATE OF TODAY (NOT USEFUL IMO)
+// FUNCTION TO DISPLAY DATE OF TODAY (not useful for now)
 // function setDateOfToday() {
 //   const today = new Date;
 //   const todayShow = today.getUTCDate();
