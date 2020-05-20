@@ -41,17 +41,11 @@ function displayTimeLeft(seconds) {
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor(seconds % 3600 / 60);
   const remainingSecs = Math.floor(seconds % 3600 % 60);
-  // const counterDisplay = `${minutes} : ${remainingSecs < 10 ? "0" : ""}${remainingSecs}`;
-  // counter.textContent = counterDisplay;
   const hDisplay = `${hours}`;
   const mDisplay = `${minutes < 10 ? "0" : ""}${minutes}`;
   const sDisplay = `${remainingSecs < 10 ? "0" : ""}${remainingSecs}`;
   counter.textContent = `${hDisplay} : ${mDisplay} : ${sDisplay}`;
-  // counter.textContent = hDisplay;
 }
-  // const hDisplay = hours > 0 ? hours + (hours == 1 ? " hour, " : " hours, ") : "";
-  // const mDisplay = minutes > 0 ? minutes + (minutes == 1 ? " minute, " : " minutes, ") : "";
-  // const sDisplay = remainingSecs > 0 ? remainingSecs + (remainingSecs == 1 ? " second" : " seconds") : "";
 
 document.customForm.addEventListener("submit", function(event) {
   event.preventDefault();
