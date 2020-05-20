@@ -262,3 +262,7 @@ div .navbar-nav .nav-item .projects-about {
 /*#resume-button:hover {
   background-color: #3C9B77;
 }*/
+
+.hover-dropdown:hover .dropdown-menu {
+  display: block;
+}
