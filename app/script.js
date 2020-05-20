@@ -5,7 +5,7 @@ const alarmTimeValue = document.querySelector('.display_time_left_count').innerH
 const stopButton = document.getElementById("stop-button");
 const resumeButton = document.getElementById("resume-button");
 // ALARM SOUND
-const sound = new Audio("audios/alarm.mp3")
+const sound = new Audio("../audios/alarm.mp3")
 
 function timer(seconds) {
   clearInterval(countdown);
