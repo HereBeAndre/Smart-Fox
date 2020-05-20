@@ -30,6 +30,7 @@ function timer(seconds) {
 stopButton.addEventListener("click", function() {
   sound.pause();
   sound.currentTime = 0;
+  location.reload(true);
 })
 
 function hideStopButton() {
@@ -37,9 +38,11 @@ function hideStopButton() {
 }
 
 function displayTimeLeft(seconds) {
-  const minutes = Math.floor(seconds / 60);
-  const remainingSecs = seconds % 60;
-  const counterDisplay = `${minutes} : ${remainingSecs < 10 ? "0" : ""}${remainingSecs}`;
+  const hours = Math.round(seconds / 3600);
+  console.log(hours);
+  const minutes = Math.floor((seconds - (hours * 3600)) / 60);
+  const remainingSecs = seconds - (hours * 3600) - (minutes * 60);
+  const counterDisplay = `${hours < 10 ? "0"+hours : ""} : ${minutes} : ${remainingSecs < 10 ? "0" : ""}${remainingSecs}`;
   counter.textContent = counterDisplay;
 }
 
