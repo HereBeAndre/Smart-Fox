@@ -16,6 +16,7 @@ body {
   object-fit: cover;
   margin: auto;
   background-position: center center;
+  background-repeat: no-repeat;
 }
 .container {
   min-height: 100vh;
@@ -128,7 +129,7 @@ div .navbar-nav .nav-item .projects-about {
 .footer-links a {
   color: rgb(220,220,220);
   text-decoration: none;
-  font-size: 24px;
+  font-size: 18px;
   padding: 0px 10px;
   transition: 0.3s;
 }
@@ -138,7 +139,7 @@ div .navbar-nav .nav-item .projects-about {
 .email-link a {
   color: rgb(220,220,220);
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   transition: 0.3s;
 }
 .email-link a:hover {
@@ -225,6 +226,7 @@ div .navbar-nav .nav-item .projects-about {
   border: 1px solid rgb(180,180,180);
   border-radius: 4px;
   transition: all 0.3s ease;
+  box-shadow: 1px 2px 16px rgb(170,170,170);
 }
 #submitButton:hover {
   background-color: rgb(0,0,0);
