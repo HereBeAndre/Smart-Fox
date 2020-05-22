@@ -274,7 +274,18 @@ div .navbar-nav .nav-item .projects-about {
 /*Media Queries*/
 
 /* Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575.98px) { ... }
+@media (max-width: 575.98px) {
+  .left-logo img {
+    height: 80px;
+  }
+  .home {
+    display: none;
+  }
+  /*.projects-about {
+    font-size: 10px;
+    visibility: hidden;
+  }*/
+}
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767.98px) { ... }
