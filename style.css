@@ -10,7 +10,7 @@ body {
   text-align: center;
 }
 .background-image {
-  background-image: url(images/alarm-clock-bg.jpg);
+  background-image: url(images/blue-bg.jpg);
   max-height: 100vh;
   max-width: 100vw;
   object-fit: cover;
@@ -34,15 +34,10 @@ body {
 }
 .main-content {
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: space-around;
   margin: 0 auto;
-}
-#stop-btn {
-  width: 100px;
-  height: 50px;
-  color: red;
-  background-color: white;
 }
 
 /*NAVBAR*/
@@ -155,26 +150,30 @@ div .navbar-nav .nav-item .projects-about {
 #custom-time {
   display: flex;
   position: relative;
-  width: 100%;
+  left: 15%;
+  width: 50%;
+  margin: 0 auto;
   height: 100px;
   overflow: hidden;
   align-items: flex-end;
 }
 
 #custom-time-input {
-  width: 100%;
+  width: 30%;
   height: 100%;
   padding-top: 20px;
   border: none;
   background-color: transparent;
   outline: none;
+  color: white;
+  font-size: 18px;
 }
 
 #custom-time label {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  width: 60%;
+  width: 24%;
   height: 100%;
   pointer-events: none;
   border-bottom: 2px solid black;
@@ -188,7 +187,7 @@ div .navbar-nav .nav-item .projects-about {
   bottom: -3px;
   width: 100%;
   height: 100%;
-  border-bottom: 6px solid #c1e6df;
+  border-bottom: 6px solid rgb(250,250,250);
   transform: translateX(-100%);
   transition: all 0.3s ease;
 }
@@ -206,9 +205,9 @@ div .navbar-nav .nav-item .projects-about {
 #custom-time input:valid + .label-minutes .content-minutes {
   transform: translateY(-150%);
   font-size: 20px;
-  font-weight: bolder;
+  color: white;
   transition: all 0.3s ease;
-  color: rgb(40,40,40);
+  color: rgb(250,250,250);
 }
 
 #custom-time #custom-time-input:focus + .label-minutes::after,
@@ -223,10 +222,9 @@ div .navbar-nav .nav-item .projects-about {
   width: 120px;
   background-color: rgb(40,40,40);
   color: white;
-  border: 1px solid rgb(180,180,180);
+  border: 1px solid rgb(0,0,0);
   border-radius: 4px;
   transition: all 0.3s ease;
-  box-shadow: 1px 2px 16px rgb(170,170,170);
 }
 #submitButton:hover {
   background-color: rgb(0,0,0);
