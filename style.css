@@ -275,16 +275,47 @@ div .navbar-nav .nav-item .projects-about {
 
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
-  .left-logo img {
-    height: 80px;
+  .container .navbar .left-logo img {
+    height: 100px !important;
   }
   .home {
     display: none;
   }
-  /*.projects-about {
-    font-size: 10px;
-    visibility: hidden;
-  }*/
+  .projects-about {
+    font-size: 16px !important;
+  }
+  .hide-small {
+    display: none;
+  }
+  .navbar-lewagon {
+    margin: 0 !important;
+    flex-wrap: initial;
+  }
+  .main-content {
+    height: 80vh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  #custom-time {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .display_time_left_count {
+    font-size: 56px !important;
+  }
+  .container {
+    height: 100vh;
+  }
+  .footer {
+    padding: 0 16px;
+  }
+  .footerHeaders {
+    font-size: 14px !important;
+  }
+  .footer p {
+    font-size: 14px !important;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up)*/
