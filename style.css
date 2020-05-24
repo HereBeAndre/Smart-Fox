@@ -276,6 +276,9 @@ div .navbar-nav .nav-item .projects-about {
 
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
+  .navbar-lewagon {
+    margin: 0 auto !important;
+  }
   .container .navbar .left-logo img {
     height: 100px !important;
   }
@@ -283,7 +286,7 @@ div .navbar-nav .nav-item .projects-about {
     display: none;
   }
   .projects-about {
-    font-size: 16px !important;
+    display: none;
   }
   .hide-small {
     display: none;
@@ -314,8 +317,11 @@ div .navbar-nav .nav-item .projects-about {
   .footerHeaders {
     font-size: 14px !important;
   }
-  .footer p {
-    font-size: 14px !important;
+  .footer-links a, .email-link a {
+    font-size: 12px !important;
+  }
+  .hide-small-dev {
+    display: none;
   }
 }
 

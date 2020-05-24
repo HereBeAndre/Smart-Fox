@@ -24,6 +24,9 @@ function timer(seconds) {
       resumeButton.hidden = true;
       return;
     }
+    if(secondsLeft <= 10) {
+      document.querySelector(".display_time_left_count").style.color = "red";
+    }
     displayTimeLeft(secondsLeft)
   }, 1000);
 }
@@ -50,6 +53,9 @@ function displayTimeLeft(seconds) {
 
 document.customForm.addEventListener("submit", function(event) {
   event.preventDefault();
+  runningTimerBg = document.querySelector(".background-image");
+  // Setta un cambio colore che parta dal centro!
+  runningTimerBg.style.background = "red";
   const minutes = this.minutes.value;
   if(minutes < 1) {
     alert("Value must be greater than 1");
