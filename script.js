@@ -14,6 +14,7 @@ function timer(seconds) {
   displayTimeLeft(seconds);
   countdown = setInterval(() => {
     resumeButton.style.visibility = "visible";
+    stopButton.hidden = false;
     secondsLeft = Math.round((then - Date.now()) / 1000);
     if(secondsLeft < 0) {
       clearInterval(countdown);

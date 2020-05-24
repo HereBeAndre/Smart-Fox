@@ -31,6 +31,7 @@ body {
   width: 100%;
   color: rgb(255,255,255);
   margin: 0 auto;
+  margin-bottom: 16px;
 }
 .main-content {
   display: flex;
@@ -38,6 +39,7 @@ body {
   width: 100%;
   justify-content: space-around;
   margin: 0 auto;
+  height: 50vh;
 }
 
 /*NAVBAR*/
@@ -74,9 +76,10 @@ div .navbar-nav .nav-item .projects-about {
   padding: 0 auto !important;
 }
 .dropdown-item:hover {
-  background-color: #f6c3c1;
+  background-color: rgb(55,55,55);
   height: 100%;
   transition: 0.4s;
+  color: white;
 }
 .right-side {
   width: 50%;
@@ -159,7 +162,7 @@ div .navbar-nav .nav-item .projects-about {
 }
 
 #custom-time-input {
-  width: 30%;
+  width: 28%;
   height: 100%;
   padding-top: 20px;
   border: none;
@@ -232,14 +235,14 @@ div .navbar-nav .nav-item .projects-about {
 #stop-button {
   height: 40px;
   width: 120px;
-  background-color: #5776be;
+  background-color: #DA3A41;
   color: white;
   border: 1px solid rgb(180,180,180);
   border-radius: 4px;
   transition: all 0.3s ease;
 }
 #stop-button:hover {
-  background-color: #4563b9;
+  background-color: #EE3C44;
 }
 
 /*CSS for this button is substituded in the JS function*/
