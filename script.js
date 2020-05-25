@@ -53,9 +53,9 @@ function displayTimeLeft(seconds) {
 
 document.customForm.addEventListener("submit", function(event) {
   event.preventDefault();
-  runningTimerBg = document.querySelector(".background-image");
+  // runningTimerBg = document.querySelector(".background-image");
   // Setta un cambio colore che parta dal centro!
-  runningTimerBg.style.background = "red";
+  // runningTimerBg.style.background = "red";
   const minutes = this.minutes.value;
   if(minutes < 1) {
     alert("Value must be greater than 1");
